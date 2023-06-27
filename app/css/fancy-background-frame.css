@@ -1,0 +1,80 @@
+﻿:root {
+    --fc-green-border: #1eb464;
+    --fc-yellow-border: #FFE569;
+    --fc-babygreen-border: #B3C890;
+    --fc-blushgreen-border: #DBDFAA;
+    --fc-teal-border: #73A9AD;
+    --fc-pure-green-border: #99F3BD;
+    --fc-fullgreen-border: #28DF99;
+}
+
+img.img-border1 {
+    --b: 5px; /* border thickness */
+    --c: #0000 25%,var(--fc-yellow-border) 0; /* define the color here */
+    padding: 10px;
+    background: conic-gradient(from 90deg at top var(--b) left var(--b),var(--c)) 0 0,
+                /* conic-gradient(from 180deg at top var(--b) right var(--b),var(--c)) 100% 0, 
+               conic-gradient(from 0deg at bottom var(--b) left var(--b),var(--c)) 0 100%, */
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--c)) 100% 100%;
+    background-size: 50px 50px; /* adjust border length here */
+    background-repeat: no-repeat;
+    transition: .6s;
+    cursor: pointer;
+    width: 100%;
+}
+
+    img:hover {
+        background-size: 51% 51%;
+    }
+
+  /*
+.header-bottom-bg-color {
+    background-color: #F4E5DD;
+}
+*/
+
+img.img-border {
+    --b: 8px; /* border thickness*/
+    --s: 60px; /* size of the corner*/
+    --g: 14px; /* the gap*/
+    --c: var(--fc-fullgreen-border);
+    padding: calc(var(--b) + var(--g));
+    background-image: conic-gradient(from 90deg at top var(--b) left var(--b),#0000 25%,var(--c) 0), conic-gradient(from -90deg at bottom var(--b) right var(--b),#0000 25%,var(--c) 0);
+    background-position: var(--_p,0%) var(--_p,0%), calc(100% - var(--_p,0%)) calc(100% - var(--_p,0%));
+    background-size: var(--s) var(--s);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-position .3s var(--_i,.3s), background-size .3s calc(.3s - var(--_i,.3s));
+}
+
+img.alt {
+    background-image: conic-gradient(from 180deg at top var(--b) right var(--b),#0000 25%,var(--c) 0), conic-gradient(from 0deg at bottom var(--b) left var(--b),#0000 25%,var(--c) 0);
+    background-position: calc(100% - var(--_p,0%)) var(--_p,0%), var(--_p,0%) calc(100% - var(--_p,0%),border-radius:5px);
+}
+
+    img:hover {
+        background-size: calc(100% - var(--g)) calc(100% - var(--g));
+        --_p: calc(var(--g)/2);
+        --_i: 0s;
+    }
+
+img.img-border2 {
+    --s: 15px; /* control the size */
+    padding: var(--s);
+    border: var(--s) solid #0000;
+    background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
+    clip-path: polygon( 0 0,33% 0,50% calc(2*var(--s)),66% 0, 100% 0,100% 33%,calc(100% - 2*var(--s)) 50%,100% 66%, 100% 100%,66% 100%,50% calc(100% - 2*var(--s)),33% 100%, 0 100%,0 66%,calc(2*var(--s)) 50%,0 33% )
+}
+
+a.back-home {
+    color: #3c354e;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 115px auto 50px;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    margin: 115px 0 50px;
+}
